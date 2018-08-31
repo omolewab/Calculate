@@ -1,0 +1,38 @@
+﻿@using Calculate.ViewModel
+
+@model CalculateVM
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<br />
+<div style="font-family:'Adobe Hebrew'">
+    <p>@ViewData["Greeting"]</p>
+</div>
+
+<div asp-validation-summary="ModelOnly"></div>
+<div style=" font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
+    <form method="post" asp-controller="home" asp-action="Calculate">
+        <div>
+            <label>First Number</label>
+            <input asp-for="FirstNumber" type="number" name="FirstNumber" />
+            <span asp-validation-for="FirstNumber"></span>
+
+            <label>Second Number</label>
+            <input asp-for="SecondNumber" type="number" name="SecondNumber" />
+            <span asp-validation-for="SecondNumber"></span>
+
+            <label asp-for="Operator">@Model.OperatorsList"</label>
+            <input asp-for="Operator" type="radio" value="@Model.OperatorsList" />
+            @*<select asp-for="Operator" asp-items="Model.OperatorsList"></select>*@
+            @*<input type="radio" name="Operator" value="Add" />Add
+        <input type="radio" name="Operator" value="Sub" />Sub
+        <input type="radio" name="Operator" value="Mul" />Mul
+        <input type="radio" name="Operator" value="Div" />Div*@
+
+            <input type="submit" name="Calculate" />
+        </div>
+
+    </form>
+</div>

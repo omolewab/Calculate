@@ -23,10 +23,10 @@
             <input asp-for="SecondNumber" type="number" name="SecondNumber" />
             <span asp-validation-for="SecondNumber"></span>
 
-            <label asp-for="Operator">@Model.OperatorsList"</label>
-            <input asp-for="Operator" type="radio" value="@Model.OperatorsList" />
-            @*<select asp-for="Operator" asp-items="Model.OperatorsList"></select>*@
-            @*<input type="radio" name="Operator" value="Add" />Add
+            <label asp-for="Operator">Operator</label>
+            <select asp-for="Operator" asp-items="Model.OperatorsList"></select>
+            @*<input asp-for="Operator" type="radio" value="@Model.OperatorsList" />
+                <input type="radio" name="Operator" value="Add" />Add
         <input type="radio" name="Operator" value="Sub" />Sub
         <input type="radio" name="Operator" value="Mul" />Mul
         <input type="radio" name="Operator" value="Div" />Div*@

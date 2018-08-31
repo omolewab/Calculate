@@ -15,7 +15,7 @@ namespace Calculate.Controllers
     {
         public IActionResult Index()
         {
-            ViewData["Greeting"] = "Hellur! lets calculate";
+            ViewData["Greeting"] = "Hellur! Lets calculate";
             CalculateVM model = new CalculateVM();
             model.FirstNumber = 0;
             model.SecondNumber = 0;

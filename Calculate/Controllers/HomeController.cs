@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Calculate.Models;
 using Calculate.ViewModel;
-using MathLib;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using MathLib;
 
 namespace Calculate.Controllers
 {
@@ -20,12 +17,13 @@ namespace Calculate.Controllers
             model.FirstNumber = 0;
             model.SecondNumber = 0;
 
-            model.OperatorsList = new List<SelectListItem>();
+            model.OperatorsList = new List<operatorlist> {
 
-            model.OperatorsList.Add(new SelectListItem { Text = "Add", Value = "Add" });
-            model.OperatorsList.Add(new SelectListItem { Text = "Sub", Value = "Sub" });
-            model.OperatorsList.Add(new SelectListItem { Text = "Mul", Value = "Mul" });
-            model.OperatorsList.Add(new SelectListItem { Text = "Div", Value = "Div" });
+            new operatorlist { Id =1, operators = "Add" },
+            new operatorlist { Id = 2, operators = "Sub" },
+            new operatorlist { Id = 3, operators = "Mul" },
+            new operatorlist { Id = 4, operators = "Div" }
+        };
 
             CalculateResultVM Model = new CalculateResultVM();
 

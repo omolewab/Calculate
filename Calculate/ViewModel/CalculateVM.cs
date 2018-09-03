@@ -18,7 +18,13 @@ namespace Calculate.ViewModel
         [Required]
         public string Operator { get; set; }
 
-        public List<SelectListItem> OperatorsList { get; set; }
+        public IEnumerable<operatorlist> OperatorsList { set; get; }
 
+    }
+    public class operatorlist
+    {
+        public int Id { set; get; }
+
+        public string operators { set; get; }
     }
 }
